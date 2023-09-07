@@ -5,10 +5,10 @@
    ifneq ($(PKG_VERSION),)
      ifneq ($(PKG_RELEASE),)
 -      VERSION:=$(PKG_VERSION)-$(PKG_RELEASE)
-+      VERSION:=1$(PKG_VERSION)-$(PKG_RELEASE)
++      VERSION:=$(PKG_OR)$(PKG_VERSION)-$(PKG_RELEASE)
      else
 -      VERSION:=$(PKG_VERSION)
-+      VERSION:=1$(PKG_VERSION)
++      VERSION:=$(PKG_OR)$(PKG_VERSION)
      endif
    else
      VERSION:=$(PKG_RELEASE)
