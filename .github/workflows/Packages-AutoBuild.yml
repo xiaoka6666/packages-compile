@@ -250,7 +250,7 @@ jobs:
       id: organize
       run: |
         mkdir packages
-        mv -f openwrt/bin/packages/*/kiddin9/* packages || true
+        mv -f openwrt/bin/packages/*/kiddin9/{wiwiz,eqos} packages/ || true
         mv -f openwrt/.config packages/${{matrix.target}}.config || true
         # cp -Rf openwrt/bin/packages/*/packages/python3* packages/
         echo "FIRMWARE=$PWD/packages" >> $GITHUB_ENV
