@@ -68,7 +68,7 @@ jobs:
           -X POST https://api.github.com/repos/${{ github.repository }}/dispatches \
           -H "Accept: application/vnd.github.everest-preview+json" \
           -H "Authorization: token ${{ env.REPO_TOKEN }}" \
-          -d '{"ref":"refs/heads/21.02", "event_type": "arm_xscale ${{ github.event.inputs.packages }}", "client_payload": {"target": "arm_xscale"}}'
+          -d '{"event_type": "arm_xscale ${{ github.event.inputs.packages }}", "client_payload": {"ref":"21.02", "target": "arm_xscale"}}'
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
