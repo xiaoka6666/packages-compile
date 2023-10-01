@@ -317,7 +317,7 @@ jobs:
         REMOTE_HOST: ${{ secrets.SERVER_HOST }}
         REMOTE_USER: root
         REMOTE_PORT: ${{ secrets.SERVER_PORT }}
-        TARGET: "/www/wwwroot/op.supes.top/23.05/packages/${{matrix.target}}/"
+        TARGET: "/www/wwwroot/op.supes.top/23.05/packages/${{matrix.target}}/kiddin9/"
 
     - name: Upload packages for artifact
       uses: actions/upload-artifact@main
