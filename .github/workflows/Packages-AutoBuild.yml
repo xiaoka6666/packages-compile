@@ -28,7 +28,7 @@ env:
 jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id || github.event.sender.id == '119362912'
-    runs-on: Ubuntu-22.04
+    runs-on: ubuntu-latest
     
     name: Build ${{matrix.target}}
     strategy:
@@ -38,7 +38,7 @@ jobs:
         
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@main
       with:
         fetch-depth: 0
 
